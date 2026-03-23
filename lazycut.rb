@@ -5,25 +5,25 @@
 class Lazycut < Formula
   desc "Terminal-based video trimming TUI (ffmpeg + chafa)"
   homepage "https://github.com/emin-ozata/lazycut"
-  version "0.3.3"
+  version "0.3.4"
 
   depends_on "chafa"
   depends_on "ffmpeg"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/emin-ozata/lazycut/releases/download/v0.3.3/lazycut_0.3.3_darwin_amd64.tar.gz"
-    sha256 "cecf31433b16cf2d0f5647b056924c4ecc5e6f3c2996d738f316e91fea362e74"
+    url "https://github.com/emin-ozata/lazycut/releases/download/v0.3.4/lazycut_0.3.4_darwin_amd64.tar.gz"
+    sha256 "e856a0757de6ea01d649a990eb37144e2e622ba982a4e8367f587d12d96773ee"
 
-    def install
+    define_method(:install) do
       bin.install "lazycut"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/emin-ozata/lazycut/releases/download/v0.3.3/lazycut_0.3.3_darwin_arm64.tar.gz"
-    sha256 "18b98af84bcd628f551de6746164ec7ba7ede68dafe67a019e8481b5a41b79ec"
+    url "https://github.com/emin-ozata/lazycut/releases/download/v0.3.4/lazycut_0.3.4_darwin_arm64.tar.gz"
+    sha256 "318b763f1db92f4b54ac2731e50031928d695e30071da4e7aa193e3573dba6e7"
 
-    def install
+    define_method(:install) do
       bin.install "lazycut"
     end
   end
