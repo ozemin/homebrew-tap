@@ -5,23 +5,15 @@
 class Lazycut < Formula
   desc "Terminal-based video trimming TUI (ffmpeg + chafa)"
   homepage "https://github.com/emin-ozata/lazycut"
-  version "0.3.5"
+  version "0.3.7"
 
   depends_on "chafa"
   depends_on "ffmpeg"
   depends_on :macos
 
-  if Hardware::CPU.intel?
-    url "https://github.com/emin-ozata/lazycut/releases/download/v0.3.5/lazycut_0.3.5_darwin_amd64.tar.gz"
-    sha256 "686bddf22f20e48f83d91d661c1d2032a0253cd4d893885a8607d6ddce5c6111"
-
-    define_method(:install) do
-      bin.install "lazycut"
-    end
-  end
   if Hardware::CPU.arm?
-    url "https://github.com/emin-ozata/lazycut/releases/download/v0.3.5/lazycut_0.3.5_darwin_arm64.tar.gz"
-    sha256 "ce70810b092dc12da8e254f85415778ebd0c093cb92a6f78c65b8d2ffc038684"
+    url "https://github.com/emin-ozata/lazycut/releases/download/v0.3.7/lazycut_0.3.7_darwin_arm64.tar.gz"
+    sha256 "0349a58703c829d9051ee7e6901b7e35712a72d2760db3afffe0985c0683f76d"
 
     define_method(:install) do
       bin.install "lazycut"
